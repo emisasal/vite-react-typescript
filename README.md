@@ -2,7 +2,7 @@
 
 ## Differences with CRA
 
-- Instead of bundling all the JS modules, CSS and other assets (Webpack does this with every change and can get very slow in big projets); Vitetakes advantage of ES Modules and serves directly to the browser (type="module" in /index.html).
+- Instead of bundling all the JS modules, CSS and other assets (Webpack does this with every change and can get very slow in big projects); Vitetakes advantage of ES Modules and serves directly to the browser (type="module" in /index.html).
 - Uses Rollup to bundle files for production (npm run build).
 - Vite uses `React plugin` instead of Webpack, resulting in a faster experience.
 
@@ -10,7 +10,7 @@
 
 `npm create vite@latest new-project-name`
 
-After executing the script Vite ask for the project configurations:
+After executing the script Vite asks for the project configurations:
 
 - Select a framework (React)
 - Select a variant (JavaScript / TypeScript)
@@ -33,14 +33,14 @@ vite.config.ts
 
 - **/public**: Folder to store static assets like images, fonts and icons.
 - **/src**: Folder to store all the project code.
-- **/src/main.tsx**: The entry point for React. Imports the App component and render it to the Dom with the `ReactDOM.render()` method.
-- **index.html**: Located at the root of the project. Very simple html file with `type:"module"` and `src` with `main.tsx` file path in a script tag, and a single div with id "root".
+- **/src/main.tsx**: The entry point for React. Imports the App component and renders the Dom with `ReactDOM.render()` method.
+- **index.html**: Located at the root of the project. Straightforward html file with `type:"module"` and `src` with `main.tsx` file path in a script tag, and a single div with id "root".
 
-- **vite.config.ts**: Vite configurations for the project. Loads Vite plugins (like `react`), config the server port (for example, 3000 instead of default 5173) and add a proxy for production API.
+- **vite.config.ts**: Vite configurations for the project. Loads Vite plugins (like `react`), configures the server port (for example, 3000 instead of default 5173) and add a proxy for production API.
 
 ## Env variables
 
-Vite use dotenv internally to handle env files.
+Vite uses dotenv internally to handle env files.
 
 ```
 .env                # loaded in all cases
@@ -51,7 +51,7 @@ Vite use dotenv internally to handle env files.
 
 ## Staging mode
 
-For staging enviroment create a script executing build addind `--mode staging`. This changes the mode and load the env file `.env.staging`.
+For staging environment create a script executing build adding `--mode staging`. This changes the mode and loads the env file `.env.staging`.
 
 ---
 
