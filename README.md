@@ -49,6 +49,10 @@ Vite uses dotenv internally to handle env files.
 .env.[mode].local   # only loaded in specified mode, ignored by git
 ```
 
+The variables are loaded using `import.meta.env.NAME_OF VARIABLE`.
+Only the variables starting with "VITE_" can be rendered on the client. 
+Otherwise, the value will be undefined.
+
 ## Staging mode
 
 For staging environment create a script executing build adding `--mode staging`. This changes the mode and loads the env file `.env.staging`.
