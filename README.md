@@ -49,7 +49,7 @@ Vite uses dotenv internally to handle env files.
 .env.[mode].local   # only loaded in specified mode, ignored by git
 ```
 
-The variables are loaded using `import.meta.env.NAME_OF VARIABLE`.
+The variables are loaded using `import.meta.env.NAME_OF_VARIABLE`.
 Only the variables starting with "VITE_" can be rendered on the client. 
 Otherwise, the value will be undefined.
 
