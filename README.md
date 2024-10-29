@@ -2,7 +2,7 @@
 
 ## Differences with CRA
 
-- Instead of bundling all the JS modules, CSS and other assets (Webpack does this with every change and can get very slow in big projects); Vitetakes advantage of ES Modules and serves directly to the browser (type="module" in /index.html).
+- Instead of bundling all the JS modules, CSS and other assets (Webpack does this with every change and can get very slow in big projects); Vite takes advantage of ES Modules and serves directly to the browser (type="module" in /index.html).
 - Uses Rollup to bundle files for production (npm run build).
 - Vite uses `React plugin` instead of Webpack, resulting in a faster experience.
 
