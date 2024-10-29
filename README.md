@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# Vite + React + TypeScript
 
 ## Differences with CRA
 
