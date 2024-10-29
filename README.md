@@ -38,6 +38,19 @@ vite.config.ts
 
 - **vite.config.ts**: Vite configurations for the project. Loads Vite plugins (like `react`), configures the server port (for example, 3000 instead of default 5173) and add a proxy for production API.
 
+## Localhost Port
+
+By default Vite uses the localhost port **5173**.
+To change the port to 3000 (or any other port) modify the `vite.config.ts` file:
+```
+export default defineConfig({
+  // ...rest of the code,
+  server: {
+    port: 3000,
+  }
+})
+```
+
 ## Env variables
 
 Vite uses dotenv internally to handle env files.
