@@ -42,6 +42,7 @@ vite.config.ts
 
 By default Vite uses the localhost port **5173**.
 To change the port to 3000 (or any other port) modify the `vite.config.ts` file:
+
 ```
 export default defineConfig({
   // ...rest of the code,
@@ -63,7 +64,7 @@ Vite uses dotenv internally to handle env files.
 ```
 
 The variables are loaded using `import.meta.env.NAME_OF_VARIABLE`.
-Only the variables starting with "VITE_" can be rendered on the client. 
+Only the variables starting with "VITE\_" can be rendered on the client.
 Otherwise, the value will be undefined.
 
 ## Staging mode
@@ -74,6 +75,7 @@ For staging environment create a script executing build adding `--mode staging`.
 
 - Install Prettier as devDependency `npm i -D -E prettier`
 - On the root folder create the file `prettierrc`. Include the prettier rules in json format. For example:
+
 ```
 {
   "semi": false,
@@ -83,7 +85,9 @@ For staging environment create a script executing build adding `--mode staging`.
   "tabWidth": 2
 }
 ```
+
 - Install the devDependency `npm i -D eslint-config-prettier` to avoid conflicts between ESLint and Prettier. Modify `.eslint.config.js`:
+
 ```
 export default tseslint.config(
     ...
@@ -94,7 +98,9 @@ export default tseslint.config(
     ...
 )
 ```
+
 - Optionally, to add format on save create the file `/.vscode/settings.json` with:
+
 ```
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -105,8 +111,10 @@ export default tseslint.config(
 ## Routing (React Router)
 
 Unlike CRA, React Router is not pre installed in the project.
-- To install as a library `npm i react-router`.
-- Add `BrowserRouter` around App in `/src/main.tsx`.
+
+- To install as a library `npm i react-router` and `npm i -D @types/react-router`.
+- Import and add `BrowserRouter` around App in `/src/main.tsx`.
+- Create the routes with path and element (page components) in App.tsx
 
 ---
 
