@@ -101,6 +101,13 @@ export default tseslint.config(
   "editor.formatOnSave": true
 }
 ```
+
+## Routing (React Router)
+
+Unlike CRA, React Router is not pre installed in the project.
+- To install as a library `npm i react-router`.
+- Add `BrowserRouter` around App in `/src/main.tsx`.
+
 ---
 
 **This is the official documentation:**
