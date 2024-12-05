@@ -70,6 +70,37 @@ Otherwise, the value will be undefined.
 
 For staging environment create a script executing build adding `--mode staging`. This changes the mode and loads the env file `.env.staging`.
 
+## Prettier
+
+- Install Prettier as devDependency `npm i -D -E prettier`
+- On the root folder create the file `prettierrc`. Include the prettier rules in json format. For example:
+```
+{
+  "semi": false,
+  "trailingComma": "es5",
+  "singleQuote": false,
+  "printWidth": 80,
+  "tabWidth": 2
+}
+```
+- Install the devDependency `npm i -D eslint-config-prettier` to avoid conflicts between ESLint and Prettier. Modify `.eslint.config.js`:
+```
+export default tseslint.config(
+    ...
+    extends: [
+      ...
+      "eslint-config-prettier" // Add this line
+    ],
+    ...
+)
+```
+- Optionally, to add format on save create the file `/.vscode/settings.json` with:
+```
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}
+```
 ---
 
 **This is the official documentation:**
