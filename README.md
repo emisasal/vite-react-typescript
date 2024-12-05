@@ -64,7 +64,7 @@ Vite uses dotenv internally to handle env files.
 ```
 
 The variables are loaded using `import.meta.env.NAME_OF_VARIABLE`.
-Only the variables starting with "VITE\_" can be rendered on the client.
+Only the variables starting with "VITE_" can be rendered on the client.
 Otherwise, the value will be undefined.
 
 ## Staging mode
