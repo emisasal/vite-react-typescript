@@ -12,7 +12,8 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/Prashasync/vite-react-typescript.git'
+                git branch: 'main', url: 'https://github.com/Prashasync/vite-react-typescript.git'
+
             }
         }
 
