@@ -1,46 +1,51 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'Node18' // Match the name you configured
+    }
+
     environment {
-        NODE_ENV = 'Node20'
+        APP_DIR = 'vite-react-typescript'
     }
 
     stages {
+        stage('Clone Repo') {
+            steps {
+                git 'https://github.com/Prashasync/vite-react-typescript.git'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
-                script {
-                    // Ensure Node.js and npm are installed on the Jenkins agent
-                    sh 'npm install'
-                }
+                sh 'npm install'
             }
         }
 
         stage('Build') {
             steps {
-                script {
-                    // Build the Vite project
-                    sh 'npm run build'
-                }
+                sh 'npm run build'
             }
         }
 
-        stage('Archive Artifacts') {
+        stage('Deploy') {
             steps {
                 script {
-                    // Archive the build artifacts (e.g., the dist folder)
-                    archiveArtifacts artifacts: 'dist/**', fingerprint: true
-                }
-            }
-        }
-
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    // Build the Docker image
-                    sh 'docker build -t react-vite-app .'
+                    def deployDir = "/var/www/html/${APP_DIR}"
+                    sh "sudo rm -rf ${deployDir}"
+                    sh "sudo mkdir -p ${deployDir}"
+                    sh "sudo cp -r dist/* ${deployDir}/"
                 }
             }
         }
     }
 
+    post {
+        success {
+            echo 'Deployment Successful!'
+        }
+        failure {
+            echo 'Build/Deployment Failed'
+        }
+    }
 }
