@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import { ChartOptions } from 'chart.js';
 
 const MoodChart: React.FC = () => {
   const [selectedView, setSelectedView] = useState('Week');
@@ -45,7 +46,7 @@ const MoodChart: React.FC = () => {
     ],
   };
 
-  const options = {
+  const options: ChartOptions<'line'> = {
     responsive: true,
     maintainAspectRatio: false,
     animation: {
@@ -76,7 +77,7 @@ const MoodChart: React.FC = () => {
 
   return (
     <div className="bg-white rounded-xl p-4 shadow-md">
-      {/* Heading and Toggle Buttons in one line */}
+      {/* Heading and Toggle Buttons */}
       <div className="flex mb-4 justify-between items-center flex-wrap">
         <h2 className="text-lg font-semibold">Mood Chart</h2>
         <div className="flex">

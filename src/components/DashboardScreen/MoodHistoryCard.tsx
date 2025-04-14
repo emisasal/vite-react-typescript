@@ -1,37 +1,3 @@
-// import React from 'react';
-
-// const moods = [
-//   { date: 'Mon', mood: '😊' },
-//   { date: 'Tue', mood: '😐' },
-//   { date: 'Wed', mood: '😢' },
-//   { date: 'Thu', mood: '😊' },
-//   { date: 'Fri', mood: '😡' },
-// ];
-
-// const MoodHistoryCard: React.FC = () => {
-//   return (
-//     <div className="bg-white rounded-xl p-4 shadow-md">
-//       <h2 className="text-lg font-semibold mb-3">Weekly Mood History</h2>
-//       <div className="space-y-2">
-//         {moods.map((entry, index) => (
-//           <div
-//             key={index}
-//             className="flex justify-between items-center bg-gray-100 p-2 rounded-lg"
-//           >
-//             <span className="text-sm">{entry.date}</span>
-//             <span className="text-2xl">{entry.mood}</span>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default MoodHistoryCard;
-
-
-
-import React from 'react';
 import HappyIcon from '../../assets/icons/happy-face.svg';
 import veryHappy from '../../assets/icons/beaming-face-with-smiling-eyes.svg';
 import Neutral from '../../assets/icons/neutral-face.svg';

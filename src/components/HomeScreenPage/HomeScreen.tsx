@@ -1,9 +1,6 @@
-import React from "react";
 import BottomNavBar from '../common/BottomNavBar';
 import '../common/BottomNavBar.css';
 import Notifications from "./Notifications";
-import MoodHealthOverview from "./MoodHealthOverview";
-
 import gridIcon from "../../assets/icons/grid-line.svg";
 import searchIcon from "../../assets/icons/search_line.svg";
 import bellIcon from "../../assets/icons/Union.png";
@@ -34,13 +31,13 @@ const HomeScreen = () => {
         Hello, {patientName}. <br /> You’ve taken a step to care for yourself.
       </div>
 
-      {/* Health Overview - ✅ Clean as per Figma */}
+      {/* Health Overview*/}
       <div className="grid grid-cols-2 gap-4 mb-8">
         <div className="bg-gray-100 rounded-xl flex flex-col justify-center items-center p-6">
           <img
             src="/src/assets/icons/youlookHappy.svg"
             alt="Mood"
-            className="w-16 h-16" // ✅ Size good, text removed
+            className="w-16 h-16"
           />
         </div>
 
@@ -48,7 +45,7 @@ const HomeScreen = () => {
           <img
             src="/src/assets/icons/heartHealth.svg"
             alt="Heart Health"
-            className="w-16 h-16" // ✅ Size good, text removed
+            className="w-16 h-16"
           />
         </div>
       </div>
@@ -62,7 +59,6 @@ const HomeScreen = () => {
         alt="Filter"
         className="fixed bottom-20 right-6 z-50 w-20 h-20"
       />
-
       {/* Bottom Navigation */}
       <BottomNavBar />
     </div>

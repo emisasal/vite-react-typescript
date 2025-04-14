@@ -1,51 +1,3 @@
-// import React, { useState } from 'react';
-// import './AppointmentsPage.css';
-
-// const Calendar: React.FC = () => {
-//   const [currentMonth] = useState('Mar 2025');
-//   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-//   const dates = Array.from({ length: 30 }, (_, i) => i + 1);
-//   const activeDate = 4;
-
-//   return (
-//     <div className="bg-white rounded-xl p-4 shadow-md">
-//       {/* Month and Arrows */}
-//       <div className="flex justify-between items-center mb-4">
-//         <span className="font-semibold">{currentMonth}</span>
-//         <div className="flex space-x-2">
-//           <button className="text-xl">&lt;</button>
-//           <button className="text-xl">&gt;</button>
-//         </div>
-//       </div>
-
-//       {/* Week Days */}
-//       <div className="grid grid-cols-7 text-center text-sm mb-2">
-//         {days.map((day) => (
-//           <div key={day} className="font-medium text-gray-600">
-//             {day}
-//           </div>
-//         ))}
-//       </div>
-
-//       {/* Dates */}
-//       <div className="grid grid-cols-7 text-center text-sm gap-y-2">
-//         {dates.map((date) => (
-//           <div
-//             key={date}
-//             className={`flex items-center justify-center w-8 h-8 rounded-full mx-auto ${
-//               date === activeDate ? 'bg-gray-200 font-bold' : ''
-//             }`}
-//           >
-//             {date}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Calendar;
-
 import React, { useState } from "react";
 import LeftArrow from "../../assets/icons/left-arrow.svg";
 import RightArrow from "../../assets/icons/right-arrow.svg";
@@ -70,9 +22,11 @@ const Calendar: React.FC = () => {
   const daysInMonth = getDaysInMonth(currentMonth, currentYear);
   const startDay = getStartDayOfMonth(currentMonth, currentYear);
 
-  const daysArray = Array.from({ length: startDay }, () => null).concat(
-    Array.from({ length: daysInMonth }, (_, i) => i + 1)
-  );
+  const daysArray: (number | null)[] = [
+    ...Array.from({ length: startDay }, () => null),
+    ...Array.from({ length: daysInMonth }, (_, i) => i + 1),
+  ];
+  
 
   const goToPreviousMonth = () => {
     if (currentMonth === 0) {

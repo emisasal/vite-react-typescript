@@ -1,7 +1,5 @@
-import React from 'react';
 import './SplashScreen3.css';
-import splashVideo from '../../assets/videos/splash3-animation.mp4'; // ✅ Make sure path is correct
-
+import splashVideo from '../../assets/videos/splash3-animation.mp4'; 
 const SplashScreen3 = () => {
   return (
     <div className="splash3-container">

@@ -1,4 +1,3 @@
-import React from 'react';
 import './SplashScreen2.css';
 import splash2Animation from '../../assets/videos/splash2-animation.mp4'; // ✅ Imported properly
 

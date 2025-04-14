@@ -2,7 +2,7 @@
 .splash3-container {
     position: relative;
     min-height: 100vh;
-    background-color: #fbe9dd; /* ✅ Exact Figma color */
+    background-color: #fbe9dd; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,7 +17,7 @@
   .video-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 1.8 / 1; /* ✅ Maintain ratio */
+    aspect-ratio: 1.8 / 1; 
     max-height: 45vh;
     display: flex;
     justify-content: center;
@@ -34,14 +34,14 @@
     object-fit: cover;
     display: block;
     pointer-events: none;
-    transform: scale(1.05); /* ✅ Remove edges */
+    transform: scale(1.05); 
     margin-top: clamp(0.5rem, 2.5vh, 1.5rem);
   }
   
   /* Heading section */
   .text-section {
     width: 100%;
-    margin-top: clamp(1.5rem, 5vh, 3rem); /* ✅ Top spacing fixed */
+    margin-top: clamp(1.5rem, 5vh, 3rem); 
     text-align: center;
     z-index: 2;
     position: relative;
@@ -50,7 +50,7 @@
   .text-section h1 {
     font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: bold;
-    color: #1e1e1e; /* ✅ Exact color */
+    color: #1e1e1e;
     margin: 0;
   }
   
@@ -58,8 +58,8 @@
   .description-section {
     max-width: 300px;
     text-align: center;
-    font-size: clamp(0.75rem, 2.5vw, 1rem); /* ✅ Responsive */
-    color: #4a3f55; /* ✅ Exact color */
+    font-size: clamp(0.75rem, 2.5vw, 1rem); 
+    color: #4a3f55; 
     line-height: 1.4;
     margin-bottom: 2rem;
     z-index: 2;
@@ -81,7 +81,7 @@
     padding: 0.75rem 2rem;
     border: none;
     border-radius: 10px;
-    background-color: #aa00ff; /* ✅ Exact Figma purple */
+    background-color: #aa00ff; 
     color: white;
     font-weight: bold;
     cursor: pointer;

@@ -37,8 +37,8 @@
   z-index: 1;
   width: 100%;
   padding: 0 1rem;
-  margin-top: clamp(0.5rem, 2vh, 1rem); /* ✅ Move slightly down (like you asked) */
-  margin-bottom: clamp(1rem, 2vh, 1.5rem); /* ✅ Adds bottom gap for whole section */
+  margin-top: clamp(0.5rem, 2vh, 1rem); 
+  margin-bottom: clamp(1rem, 2vh, 1.5rem); 
 }
 
 .text-section h1 {
@@ -80,7 +80,7 @@
 .login-link {
   font-size: clamp(0.75rem, 2.5vw, 0.9rem);
   color: #eee;
-  margin-bottom: 1rem; /* ✅ Add final bottom margin */
+  margin-bottom: 1rem; 
 }
 
 .login-link span {

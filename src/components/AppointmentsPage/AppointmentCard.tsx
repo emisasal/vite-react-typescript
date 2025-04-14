@@ -1,21 +1,3 @@
-// import React from 'react';
-
-// interface AppointmentCardProps {
-//   title: string;
-//   time: string;
-// }
-
-// const AppointmentCard: React.FC<AppointmentCardProps> = ({ title, time }) => {
-//   return (
-//     <div className="appointment-card">
-//       <h4>{title}</h4>
-//       <p>{time}</p>
-//     </div>
-//   );
-// };
-
-// export default AppointmentCard;
-
 import React from 'react';
 import './AppointmentsPage.css';
 import CheckIcon from '../../assets/icons/check.svg'; // Use your existing icons
