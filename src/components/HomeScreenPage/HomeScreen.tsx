@@ -1,13 +1,15 @@
-import BottomNavBar from '../common/BottomNavBar';
-import '../common/BottomNavBar.css';
-import Notifications from "./Notifications";
-import gridIcon from "../../assets/icons/grid-line.svg";
-import searchIcon from "../../assets/icons/search_line.svg";
-import bellIcon from "../../assets/icons/Union.png";
-import filterIcon from "../../assets/icons/filter-icon.svg";
+import BottomNavBar from "../common/BottomNavBar"
+import "../common/BottomNavBar.css"
+import Notifications from "./Notifications"
+import gridIcon from "../../assets/icons/grid-line.svg"
+import searchIcon from "../../assets/icons/search_line.svg"
+import bellIcon from "../../assets/icons/Union.png"
+import filterIcon from "../../assets/icons/filter-icon.svg"
+import youlookHappy from "../../assets/icons/youlookHappy.svg"
+import heartHealth from "../../assets/icons/heartHealth.svg"
 
 const HomeScreen = () => {
-  const patientName = "Matt";
+  const patientName = "Matt"
 
   return (
     <div className="relative mx-auto px-4 pt-8 pb-24 max-w-7xl w-full bg-white min-h-screen">
@@ -35,7 +37,7 @@ const HomeScreen = () => {
       <div className="grid grid-cols-2 gap-4 mb-8">
         <div className="bg-gray-100 rounded-xl flex flex-col justify-center items-center p-6">
           <img
-            src="/src/assets/icons/youlookHappy.svg"
+            src= {youlookHappy}
             alt="Mood"
             className="w-16 h-16"
           />
@@ -43,7 +45,7 @@ const HomeScreen = () => {
 
         <div className="bg-purple-100 rounded-xl flex flex-col justify-center items-center p-6">
           <img
-            src="/src/assets/icons/heartHealth.svg"
+            src= {heartHealth}
             alt="Heart Health"
             className="w-16 h-16"
           />
@@ -62,7 +64,7 @@ const HomeScreen = () => {
       {/* Bottom Navigation */}
       <BottomNavBar />
     </div>
-  );
-};
+  )
+}
 
-export default HomeScreen;
+export default HomeScreen
