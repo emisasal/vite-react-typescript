@@ -1,7 +1,11 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SplashScreen2.css';
-import splash2Animation from '../../assets/videos/splash2-animation.mp4'; // ✅ Imported properly
+import splash2Animation from '../../assets/videos/splash2-animation.mp4';
 
 const SplashScreen2 = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="splash2-container">
       {/* Top text */}
@@ -31,8 +35,8 @@ const SplashScreen2 = () => {
 
       {/* Buttons */}
       <div className="button-section">
-        <button className="skip-btn">Skip</button>
-        <button className="next-btn">Next</button>
+        <button className="skip-btn" onClick={() => navigate('/register')}>Skip</button>
+        <button className="next-btn" onClick={() => navigate('/splashscreen3')}>Next</button>
       </div>
     </div>
   );

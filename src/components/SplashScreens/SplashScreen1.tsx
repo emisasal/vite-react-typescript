@@ -3,7 +3,7 @@ import './SplashScreen1.css';
 import { useNavigate } from 'react-router-dom';
 import splashVideo from '../../assets/videos/splash1-animation.mp4';
 
-const SplashScreen: React.FC = () => {
+const SplashScreen1: React.FC = () => {
   const navigate = useNavigate();
 
   return (
@@ -26,17 +26,20 @@ const SplashScreen: React.FC = () => {
       </div>
 
       {/* Get Started Button */}
-      <button className="get-started-btn" onClick={() => navigate('/home')}>
-        Get Started
-      </button>
+      <button className="get-started-btn" onClick={() => navigate('/splashscreen2')}>
+  Get Started
+</button>
+
 
       {/* Login Link */}
       <p className="login-link">
-        Already have an account? <span onClick={() => navigate('/login')}>Login</span>
+        Already have an account?{' '}
+        <span onClick={() => navigate('/login')} style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+          Login
+        </span>
       </p>
     </div>
   );
 };
 
-export default SplashScreen;
-
+export default SplashScreen1;

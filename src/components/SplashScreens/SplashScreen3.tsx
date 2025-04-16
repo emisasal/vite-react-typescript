@@ -1,10 +1,15 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SplashScreen3.css';
 import splashVideo from '../../assets/videos/splash3-animation.mp4'; 
+
 const SplashScreen3 = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="splash3-container">
-   {/* Top Text */}
-   <div className="text-section">
+      {/* Top Text */}
+      <div className="text-section">
         <h1>Connect with Experts</h1>
       </div>
 
@@ -16,7 +21,6 @@ const SplashScreen3 = () => {
         </video>
       </div>
 
-
       {/* Description */}
       <div className="description-section">
         <p>
@@ -26,7 +30,7 @@ const SplashScreen3 = () => {
 
       {/* Button */}
       <div className="button-section">
-        <button className="letsgo-btn">Let’s Go</button>
+        <button className="letsgo-btn" onClick={() => navigate('/register')}>Let’s Go</button>
       </div>
     </div>
   );
