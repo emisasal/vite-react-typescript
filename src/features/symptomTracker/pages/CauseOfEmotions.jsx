@@ -20,7 +20,7 @@ const CauseOfEmotion = () => {
   const handleClick = async (cause) => {
     try {
       const response = await axios.post(
-        "https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/symptoms/log/cause-of-emotion",
+        `${process.env.REACT_APP_SERVER_ENDPOINT}/symptoms/log/cause-of-emotion`,
         { cause },
         {
           headers: {

@@ -25,8 +25,7 @@ const RegisterForm = () => {
     }
     try {
       const response = await axios.post(
-        "http://localhost:3001/users/register",
-        // `https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/api/v/register`,
+        `${process.env.REACT_APP_SERVER_ENDPOINT}/api/v1/login`,
         formData,
         {
           headers: {

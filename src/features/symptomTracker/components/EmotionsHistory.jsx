@@ -11,7 +11,7 @@ const EmotionHistory = ({ symptomTrackerHistory }) => {
             <Link
               className="emotion-item"
               key={index}
-              to={`https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/symptom-tracking/${emotion.log_id}`}
+              to={`${process.env.REACT_APP_SERVER_ENDPOINT}/symptom-tracking/${emotion.log_id}`}
             >
               <li style={{ cursor: "pointer" }}>
                 <strong>{emotion.feelings}</strong>

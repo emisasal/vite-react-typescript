@@ -19,8 +19,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/auth/login",
-        // `https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/SNS_SQS_API/api/v1/login`,
+        `${process.env.REACT_APP_SERVER_ENDPOINT}/api/v1/login`,
         formData,
         {
           headers: { "Content-Type": "application/json" },

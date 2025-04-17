@@ -9,7 +9,7 @@ const EmotionQuestionare = () => {
   const handleClick = async (emotion) => {
     try {
       const response = await axios.post(
-        "https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/symptoms/log/emotions",
+        `${process.env.REACT_APP_SERVER_ENDPOINT}/symptoms/log/emotions`,
         emotion,
         {
           headers: {

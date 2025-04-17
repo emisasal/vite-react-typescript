@@ -1,11 +1,11 @@
 import React from "react";
-import RegisterForm from "./partials/RegisterForm";
-import "./register.css"
+import "../../../shared/styles/register.css";
+import RegisterForm from "../components/RegisterForm";
 
 const Register = () => {
   return (
     <div className="login-container">
-        <RegisterForm />
+      <RegisterForm />
     </div>
   );
 };

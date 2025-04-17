@@ -11,8 +11,7 @@ const SendPasswordRequest = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/auth/password-recovery",
-        // "/api/v1/register "
+        "`https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/SNS_SQS_API/api/v1/login`/auth/password-recovery",
         { email },
         {
           headers: {
@@ -20,10 +19,10 @@ const SendPasswordRequest = () => {
           },
         }
       );
-      // if (response.status !== 200) {
-      //   setStatus("Please refresh the page and try again");
-      //   return;
-      // }
+      if (response.status !== 200) {
+        setStatus("Please refresh the page and try again");
+        return;
+      }
       localStorage.setItem("email", email);
       setStep(2);
       setStatus(
@@ -38,14 +37,14 @@ const SendPasswordRequest = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/auth/verify-otp",
+        `${process.env.REACT_APP_SERVER_ENDPOINT}/api/v1/login/auth/verify-otp`,
         { email: localStorage.getItem("email"), otp }
       );
       if (response.status !== 200) {
         console.log(response);
         return;
       }
-      // localStorage.removeItem("email");
+      localStorage.removeItem("email");
       setStep(3);
       setStatus("Reset link has been sent to your email.");
     } catch (error) {

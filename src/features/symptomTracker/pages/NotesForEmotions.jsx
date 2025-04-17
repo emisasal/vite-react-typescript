@@ -15,7 +15,7 @@ const NotesForEmotions = () => {
     try {
       console.log(formData);
       const response = await axios.post(
-        `https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/symptoms/log/notes`,
+        `${process.env.REACT_APP_SERVER_ENDPOINT}/symptoms/log/notes`,
         { formData },
         {
           headers: {

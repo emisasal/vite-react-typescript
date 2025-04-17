@@ -17,7 +17,7 @@ const EmailVerification = ({ setShowOtp, email }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/api/v/verify`,
+        `${process.env.REACT_APP_SERVER_ENDPOINT}/api/v1/verify`,
         { email, otp },
         {
           headers: {

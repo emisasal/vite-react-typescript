@@ -22,20 +22,20 @@ const QuestionThree = ({ setCurrentQuestion }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // const response = await axios.post(
-      //   `https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/patients/onboarding-status`,
-      //   {
-      //     question_number: 3,
-      //     selectedOptions: [{ reminderChoice, reminderTime }],
-      //   },
-      //   {
-      //     headers: { "Content-Type": "application/json" },
-      //     withCredentials: true,
-      //   }
-      // );
-      // if(response.status === 200) {
-      //   navigate("/symptom-tracker")
-      // }
+      const response = await axios.post(
+        `${process.env.REACT_APP_SERVER_ENDPOINT}/patients/onboarding-status`,
+        {
+          question_number: 3,
+          selectedOptions: [{ reminderChoice, reminderTime }],
+        },
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,
+        }
+      );
+      if(response.status === 200) {
+        navigate("/symptom-tracker")
+      }
       navigate("/home")
     } catch (error) {
       console.error(error);

@@ -30,54 +30,54 @@ const QuestionTwo = ({ setCurrentQuestion }) => {
         return;
       }
 
-      // const response = await axios.post(
-      //   `https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/patients/onboarding-status`,
-      //   {
-      //     selectedOptions,
-      //     question_number: 2,
-      //   },
-      //   {
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     withCredentials: true,
-      //   }
-      // );
-      // if (response.status !== 200) {
-      //   setMessage(response.data.error);
-      //   return;
-      // }
+      const response = await axios.post(
+        `https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/SNS_SQS_API/api/v1/patients/onboarding-status`,
+        {
+          selectedOptions,
+          question_number: 2,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
+      if (response.status !== 200) {
+        setMessage(response.data.error);
+        return;
+      }
       setCurrentQuestion(3);
     } catch (error) {
       console.error("Error submitting form:", error);
     }
   };
 
-  // const checkOnboardingStatus = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       `${process.env.REACT_APP_PORT}/patients/onboarding-status`,
-  //       // { withCredentials: true }
-  //     );
+  const checkOnboardingStatus = async () => {
+    try {
+      const response = await axios.get(
+        `${process.env.REACT_APP_SERVER_ENDPOINT}/api/v1/patients/onboarding-status`,
+        { withCredentials: true }
+      );
 
-  //     if (response.status === 200) {
-  //       const allAnswers = response.data.onboardingStatus;
-  //       const questionOne = allAnswers.find(
-  //         (item) => item.question_number === 2
-  //       );
+      if (response.status === 200) {
+        const allAnswers = response.data.onboardingStatus;
+        const questionOne = allAnswers.find(
+          (item) => item.question_number === 2
+        );
 
-  //       if (questionOne && Array.isArray(questionOne.selected_options)) {
-  //         setSelectedOptions(questionOne.selected_options);
-  //       }
-  //     }
-  //   } catch (error) {
-  //     console.error("Error fetching onboarding status:", error);
-  //   }
-  // };
+        if (questionOne && Array.isArray(questionOne.selected_options)) {
+          setSelectedOptions(questionOne.selected_options);
+        }
+      }
+    } catch (error) {
+      console.error("Error fetching onboarding status:", error);
+    }
+  };
 
-  // useEffect(() => {
-  //   checkOnboardingStatus();
-  // }, []);
+  useEffect(() => {
+    checkOnboardingStatus();
+  }, []);
 
   return (
     <div className="questions">

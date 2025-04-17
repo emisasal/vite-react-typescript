@@ -52,7 +52,7 @@ const VoiceNoteForm = () => {
 
     try {
       const response = await axios.post(
-        `https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/symptoms/log/voicenote`,
+        `${process.env.REACT_APP_SERVER_ENDPOINT}/symptoms/log/voicenote`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

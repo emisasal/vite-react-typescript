@@ -20,7 +20,7 @@ const SymptomTracker = () => {
   const retreiveSymptomTrackerHistory = async () => {
     try {
       const response = await axios.get(
-        `https://ftmwsamij8.execute-api.us-east-1.amazonaws.com/SNS/symptoms/history`,
+        `${process.env.REACT_APP_SERVER_ENDPOINT}/symptoms/history`,
         {
           withCredentials: true,
         }
