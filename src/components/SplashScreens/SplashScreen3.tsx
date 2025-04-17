@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useNavigate } from 'react-router-dom';
 import './SplashScreen3.css';
 import splashVideo from '../../assets/videos/splash3-animation.mp4'; 
