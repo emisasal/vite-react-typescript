@@ -15,7 +15,7 @@ import "./shared/styles/App.css";
 import Otp from "./features/otp/pages/Otp";
 import Chat from "./features/chat/pages/Chat";
 import Login from "./features/auth/pages/Login";
-import Register from "./features/auth/pages/Login";
+import Register from "./features/auth/pages/Register";
 import Onboarding from "./features/onboarding/pages/Onboarding";
 import ForgotPassword from "./features/auth/pages/ForgotPassword";
 import KidTimeLine from "./features/milestones/pages/KidTimeLine";

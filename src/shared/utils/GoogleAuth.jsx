@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom";
 const GoogleAuth = () => {
   const navigate = useNavigate();
   return (
-    <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+    // <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
       <GoogleLogin
         onSuccess={async (response) => {
           try {
